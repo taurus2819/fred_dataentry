@@ -1,0 +1,693 @@
+<!DOCTYPE html 
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>FRED :: The Fossil Record Electronic Database</title>
+  <link rel="stylesheet" href="/online/style/link_styles_internal.css" type="text/css" />
+  <link rel="stylesheet" href="fred.css" type="text/css" />
+  <link rel="stylesheet" href="skins/aqua/theme.css" type="text/css" />
+ <link rel='icon' href='favicon.ico' type='image/x-icon'>
+ <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
+  <script type="text/javascript" language="javascript" src="showhide.js"></script>
+  <script type="text/javascript" language="javascript" src="scripts/watermark.js"></script>
+  <script type="text/javascript" language="javascript" src="scripts/calendar-stripped.js"></script>
+  <script type="text/javascript" language="javascript" src="scripts/calendar-en-stripped.js"></script>
+  <script type="text/javascript" language="javascript" src="scripts/calendar-setup-stripped.js"></script>
+  <script type="text/javascript" language="javascript" src="https://www.google.com/recaptcha/api.js?render=6Ldyn7sUAAAAAMrIdH7tWmP9f0N1gUIldY3PgzBI"></script>
+
+ </head>
+ <body>
+  <div id="headerWrap">
+   <a href="http://www.gns.cri.nz" id="logo"><img src="/online/images/gns_logo_internal.gif" class="headerImg"/></a>
+   <a href="https://www.fred.org.nz" id="banner"><img src="images/fred_banner.jpg" class="headerImg"/></a>
+   <a href="http://www.gsnz.org.nz" target="_blank"><img src="images/gsnz_header_black.gif" border="0" alt="logo" /></a>
+  </div>
+  <div id="navBarWrap">
+   <div class="left">
+   <div id="navBarSpacer">
+    <div class="titleWrapFloatGen">&nbsp;</div>
+   </div>
+   <div id="navPositioner">
+    <div class="navlistHeading"><span> Quick search: </span></div>
+     <ul id="navlist">
+      <li><span class="navcontent"><img src="images/blank.gif" height="20" width="10" alt="" /><form method="post" action="locality" name="FRNumJumpForm" style="display: inline; margin: 0;"><input type="text" size="12" id="frTBox" name="frNum" class="watermark" style="border: 0; font-size: 10pt;" value="Enter FR Num" onFocus="clearTextbox('frTBox','Enter FR Num');" onBlur="showDefaultText('frTBox','Enter FR Num');" />&nbsp;<input type="submit" value="Go" /></form></span></li>
+      <li><a href="index.jsp"><img border="0" src="images/home.gif">&nbsp;&nbsp;&nbsp;FRED Home</a></li>
+      <li><a href="http://data.gns.cri.nz/npc/index.jsp"><img border="0" src="images/home.gif">&nbsp;&nbsp;&nbsp;NPC Database</a></li>
+      <li><a href="folder_list.jsp"><img border="0" src="images/edit.gif">&nbsp;&nbsp;&nbsp;Data Entry</a></li>
+      <li><a href="simple_query.jsp"><img border="0" src="images/search.gif">&nbsp;&nbsp;&nbsp;Simple Query</a></li>
+      <li><a href="buildframe.jsp"><img border="0" src="images/search.gif">&nbsp;&nbsp;&nbsp;Advanced Query</a></li>
+      <li><a href="map_frame.jsp"><img border="0" src="images/map.gif">&nbsp;&nbsp;&nbsp;Interactive Map</a></li>
+      <li><a href="load_record.jsp?FoldID=14138&FeatID=121158&RecType=Outcrop"><img border="0" src="images/load.gif">&nbsp;&nbsp;&nbsp;Copy From</a></li>
+      <li><a href="javascript:submitForm('Save');"><img border="0" src="images/save.gif">&nbsp;&nbsp;&nbsp;Save</a></li>
+      <li><a href="javascript:submitForm('Submit');"><img border="0" src="images/submit.gif">&nbsp;&nbsp;&nbsp;Submit</a></li>
+      <li><a href="folder_detail.jsp?ID=14138"><img border="0" src="images/cancel.gif">&nbsp;&nbsp;&nbsp;Quit</a></li>
+      <li><a href="admin.jsp"><img border="0" src="images/edit.gif">&nbsp;&nbsp;&nbsp;FRED Admin</a></li>
+      <li><a href="logout.jsp"><img border="0" src="images/logout.gif">&nbsp;&nbsp;&nbsp;Log Out</a></li>
+     </ul>
+    </div>
+   </div>
+   <div id="contentWrap">
+    <div>
+     <div class="titleWrapFloatGen">
+      FRED :: The Fossil Record Electronic Database
+     </div>
+    </div>
+    <div id="contentWrapInner">
+	 <div style="text-align: right">Logged in as Prashanth Sitikond&nbsp;&nbsp;&nbsp;</div>
+<form name="form1" method="post" action="dp.jsp" />
+			<input type="hidden" name="SaveType" value="" />
+			<p><div id="showInst"><table border="0" width="550" style="border: none; width: 550px"><tr><td style="text-align: left"><a href="javascript:showHide('inst', 'showInst');">Instructions...</a></td></tr></table></div><div id="inst" style="visibilty: hidden; display: none">
+				<table border="0" cellpadding="0" cellspacing="0"><tr>
+<td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLT.gif"></td>
+<td height="11" style="height: 11px; background: #c9c9c9 url(images/frameT.gif) repeat-x"></td>
+<td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRT.gif"></td>
+</tr><tr>
+<td width="11" style="width: 11px; background: white url(images/frameL.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameLTi.gif" border="0"></td>
+<td style="background: white url(images/frameM.gif) repeat-x"><table border="0" style="border: none; width: 550px" width="550"><tr><td style="text-align: left">
+			<tr><td colspan="3" class="deHeading">Instructions</td></tr><tr><td style="text-align: left">
+			<ul>
+<li>Please fill out as much information as possible</li>
+<li>Red fields must be completed before submitting this form</li>
+<li>Some entry fields require specific formatting:
+    <ul>
+<li>For Date please use this format � 01/02/2011</li>
+<li>Identifiers, Stage Limits, Group and Taxonomic name entries are all type-and-select</li>
+<li>Laboratory information fields are drop-down select</li>
+<li>All other fields are free-hand type</li>
+    </ul>
+<li>Taxonomic list:<ul>
+<li>If you know the group enter it in the Group box otherwise leave it blank. For new entries (ie entries not in the database) please enter a Group and an Author if appropriate</li>
+<li>Taxonomic name accepts the following abbreviations and qualifiers:
+<ul>
+<li>aff. = affinis/related to</li>
+<li>cf. = confer/compared with</li>
+<li>fam. = family</li>
+<li>gen. = genus</li>
+<li>gr. = group</li>
+<li>MS. = manuscript name</li>
+<li>n.gen. = new genus</li>
+<li>n.sp. = new species (also n.spp.)</li>
+<li>s.l. = sensu lato/broad sense</li>
+<li>s.s. = sensu stricto/strict sense</li>
+<li>sp. = species</li>
+<li>spp. = multiple species</li>
+<li>subgen. = subgenus</li>
+<li>subsp. = subspecies</li>
+<li>var. = variety</li>
+</ul>
+<li>Taxonomic names listed below in red have not yet been approved (or have been rejected) - place your mouse over these entries to see more details. Records can't be submitted until all entries are approved</li>
+<li>Entries in the Comments box are interpreted in the following way:<ul>
+<li>Numeric value -> Specimen Count</li>
+<li>Non-numeric value -> Comments</li>
+<li>x|y -> Specimen Count = x, Specimen Coordinates = y</li>
+<li>x|y|z -> Specimen Count = x, Specimen Coordinates = y, Comments = z</li>
+    </ul>
+</li>
+    </ul>
+</li></ul>
+			</td></tr>
+			<tr><td style="text-align: right"><a href="javascript:showHide('showInst', 'inst');">Hide instructions...</a></td></tr></table><td width="11" style="width: 11px; background: white url(images/frameR.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameRTi.gif" border="0"></td>
+</tr><tr>
+<td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLB.gif"></td>
+<td height="11" style="height: 11px; background: #c9c9c9 url(images/frameB.gif) repeat-x"></td>
+<td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRB.gif"></td>
+</tr></table>
+</div>
+			
+			<p><table border="0" cellpadding="0" cellspacing="0"><tr><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLT.gif"></td><td height="11" style="height: 11px; background: #c9c9c9 url(images/frameT.gif) repeat-x"></td><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRT.gif"></td></tr><tr><td width="11" style="width: 11px; background: white url(images/frameL.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameLTi.gif" border="0"></td><td style="background: white url(images/frameM.gif) repeat-x"><table border="0" style="border: none; width: 550px; text-align: left" width="550" cellspacing="0" cellpadding="2">
+<tr><td colspan="3" class="deHeading">Administrative information</td></tr><tr><td style="text-align: left">
+<tr>
+	<td width="250" class="heading" colspan="2">Field Number</td>
+	<td width="300"><input type="text" size="30" name="FeatName" value="Test-1"></td>
+</tr>
+<tr>
+	<td class="heading" style="color: #FF0000">Registration Area</td>
+	<td></td>
+	<td><select name="RegAreaId"><option value="-">-- Choose --</option>
+		<option value="417">Antipodes Island</option>
+		<option value="416">Auckland Islands</option>
+		<option value="413">Bounty Islands</option>
+		<option value="415">Campbell Island</option>
+		<option value="401">Chatham Islands</option>
+		<option value="408">Cook Islands</option>
+		<option value="405">Fiji</option>
+		<option value="412">Kermadec Islands</option>
+		<option value="411">Lord Howe Island</option>
+		<option value="418">Macquarie Island</option>
+		<option selected="selected" value="400">Mainland NZ</option>
+		<option value="403">New Caledonia</option>
+		<option value="407">Niue</option>
+		<option value="409">Norfolk Island</option>
+		<option value="419">Offshore/Other</option>
+		<option value="421">Papua New Guinea</option>
+		<option value="402">Ross Sea</option>
+		<option value="406">Samoa</option>
+		<option value="414">The Snares</option>
+		<option value="404">Tokelau</option>
+		<option value="410">Tonga</option>
+		<option value="420">Vanuatu</option>
+		</select>
+	</td>
+</tr>
+<tr><td class="heading">Recollection of</td><td></td><td><input type="text" name="Recoll" value="" /></td></tr><tr><td class="heading" colspan="2">Working Comments<br><span class="smalltext">On submission these comments will be deleted</span></td><td><textarea name="WorkComm" rows="3" cols="40"></textarea></td></tr></table>
+<td width="11" style="width: 11px; background: white url(images/frameR.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameRTi.gif" border="0"></td></tr><tr><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLB.gif"></td><td height="11" style="height: 11px; background: #c9c9c9 url(images/frameB.gif) repeat-x"></td><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRB.gif"></td></tr>
+</table><p>
+<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLT.gif"></td>
+		<td height="11" style="height: 11px; background: #c9c9c9 url(images/frameT.gif) repeat-x"></td>
+		<td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRT.gif"></td>
+	</tr>
+	<tr>
+		<td width="11" style="width: 11px; background: white url(images/frameL.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameLTi.gif" border="0"></td>
+		<td style="background: white url(images/frameM.gif) repeat-x"><table border="0" style="border: none; width: 750px; text-align: left" width="750" cellspacing="0" cellpadding="2">
+			<tr>
+				<td colspan="3" class="deHeading">Location information</td>
+			</tr>
+			<tr><td style="text-align: left">
+			<tr><td class="heading" width="80">Location</td>
+			<td class="smallheading" style="color: #FF0000" width="60">Coord Type</td>
+				<!-- <div> -->
+					<td id="loc_info" width="100">
+						<select name="CoordType" onchange="updateCoordTypes(this)">
+							<option value="NZMG" selected>New Zealand Map Grid</option>
+							<option value="NZMS260">NZMS260</option>
+							<option value="NZTM">NZTM</option>
+							<option value="NZTopo50">NZTopo50</option>
+							<option value="NZ Yard SthIsl">NZ Yard Grid (Sth Isl)</option>
+							<option value="NZ Yard NthIsl">NZ Yard Grid (Nth Isl)</option>
+							<option value="NZMS1 SthIsl">NZMS1 (Sth Isl)</option>
+							<option value="NZMS1 NthIsl">NZMS1 (Nth Isl)</option>
+							<option value="Chatham Island Grid">Chatham Island Grid</option>
+							<option value="Auckland Island Transverse Mercator">Auckland Island Grid</option>
+							<option value="Campbell Island Transverse Mercator">Campbell Island Grid</option>
+							<option value="New Caledonia Transverse Mercator">New Caledonia Grid</option>
+							<option value="NZGD49">Lat/Long NZGD49</option>
+							<option value="Chatham Island Datum">Lat/Long Chatham Isl</option>
+							<option value="NZGD2000">Lat/Long NZGD2000</option>
+							<option value="WGS84">Lat/Long WGS84</option>
+						</select>
+					</td>
+				<!-- </div> -->
+				<div>
+					<td id="coordTypeError" class="errorMsg" style="color: red" >Required field</td>
+				</div>
+			</tr>
+<tr id="mapSheetTr" style="display: none"><td></td><td class="smallheading" style="color: #FF0000">Map Sheet</td><td><input type="text" name="MapSheet" value="" required/></td></tr><tr><td></td><td class="smallheading" style="color: #FF0000"><script><!--
+	if (document.getElementById) {
+		document.write('<span id="easting">Easting**</span>');	} else {
+		document.write('Easting/Longitude');
+	}
+--></script></td>
+<span>
+<td id="direction_info"><input type="text" name="East" value="2805080.0" /></td>
+</span>
+<span>
+	<td id="eastDirectionInfoError" class="errorMsg" style="color: red" >Required field</td>
+</span>
+</tr><tr><td></td><td class="smallheading" style="color: #FF0000"><script><!--
+	if (document.getElementById) {
+		document.write('<span id="northing">Northing</span>');	} else {
+		document.write('Northing/Latitude');
+	}
+//--></script></td>
+<span>
+<td id="direction_info"><input type="text" name="North" value="6078350.0" /></td>
+</span>
+<span>
+	<td id="northDirectionInfoError" class="errorMsg" style="color: red" >Required field</td>
+</span>
+</tr><script language="JavaScript"><!--
+function updateCoordTypes(box) {
+
+	var trWhat = "none";
+	var eWhat = "Easting";
+	var nWhat = "Northing";
+	
+	switch (box.selectedIndex) {
+		case 1:
+		case 3:
+		case 6:
+		case 7:
+			var trWhat = "table-row";
+			if (navigator.appName.indexOf("Microsoft Internet Explorer") > -1)
+				trWhat = "block";
+			break;
+		case 12:
+		case 13:
+		case 14:
+                case 15:
+			eWhat = "Longitude";
+			nWhat = "Latitude";
+			break;
+	}
+
+	document.getElementById("mapSheetTr").style.display = trWhat;
+        document.getElementById("easting").innerHTML = eWhat;
+	document.getElementById("northing").innerHTML = nWhat;
+}
+
+var datumMethod = new Array();
+datumMethod[5] = '50.0';
+
+datumMethod[14] = '2000000.0';
+
+datumMethod[2] = '2.0';
+
+datumMethod[3] = '10.0';
+
+datumMethod[4] = '5000.0';
+
+datumMethod[17] = '10.0';
+
+datumMethod[9] = '100.0';
+
+datumMethod[7] = '50.0';
+
+datumMethod[16] = '50.0';
+
+datumMethod[6] = '10.0';
+
+datumMethod[10] = '500.0';
+
+datumMethod[8] = '500.0';
+
+datumMethod[13] = '20000.0';
+
+datumMethod[11] = '0.1';
+
+datumMethod[12] = '1000.0';
+
+
+function setAccuracy(datID, form) {
+	if (datID != "-") { 
+		form.Accuracy.value = datumMethod[datID]; 
+	}
+}
+//--></script>
+<tr><td></td><td class="smallheading">Map Year</td><td><input type="text" name="MapYear" value=""></td></tr><tr><td></td><td class="smallheading">Method</td><td><select name="LocMethodID" onchange="setAccuracy(this.value, this.form)"><option value="-">-- Choose --</option><option value="5">Air Photo</option><option value="14">Country known only</option><option value="2">GPS - Differential</option><option value="3">GPS - Field</option><option value="4">Location name</option><option value="17">Map - 1:10,000 scale</option><option value="9">Map - 1:100,000 scale</option><option value="7">Map - 1:50,000 scale</option><option value="16">Map - 1:63,360 scale</option><option value="6">Map - <=1:25,000 scale</option><option value="10">Map - >=1:250,000 scale</option><option value="8">Map - scale not specified</option><option value="13">Map sheet known only</option><option value="11">Surveyed</option><option value="12">Verbal description</option></select></td></tr>
+<tr><td></td><td class="smallheading">Accuracy</td><td><input type="text" name="Accuracy" value="">&nbsp;m</td></tr>
+<tr><td></td>
+	<td class="smallheading" style="color: #FF0000">Locality<br />Description</td>
+	<td><textarea name="Loc" cols="40" rows="5" required>xyz</textarea></td>
+	<span>
+		<td id="locDescrError" class="errorMsg" style="color: red" >Required field</td>
+	</span>
+</tr>
+<tr><td></td><td class="smallheading">Country</td><td><select name="Country"><option value="-">-- Choose --</option><option value="AF">Afghanistan</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua & Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BA">Bosnia & Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Ter</option><option value="BN">Brunei Darussalam</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling Islands)</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo</option><option value="ZR">Congo (Democratic Rep)</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="HR">Croatia (Hrvatska)</option><option value="CU">Cuba</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="TP">East Timor</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="XT">Extraterrestrial</option><option value="FK">Falkland Islands</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="FX">France, Metropolitan</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Terr.</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard & McDonald Islands</option><option value="HN">Honduras</option><option value="HK">Hong Kong</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="CI">Ivory Coast</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KP">Korea (North)</option><option value="KR">Korea (South)</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Laos</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macau</option><option value="MK">Macedonia</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="AN">Netherlands Antilles</option><option value="NC">New Caledonia</option><option selected="selected" value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="MP">Northern Mariana Isles</option><option value="NO">Norway</option><option value="IW">Offshore Regions</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Reunion</option><option value="RO">Romania</option><option value="RU">Russian Federation</option><option value="RW">Rwanda</option><option value="KN">Saint Kitts & Nevis</option><option value="LC">Saint Lucia</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovak Republic</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="VC">St Vincent & Grenadines</option><option value="SH">St. Helena</option><option value="PM">St. Pierre & Miquelon</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard & Jan Mayen</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syria</option><option value="TW">Taiwan</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania</option><option value="TH">Thailand</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad & Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UM">US Minor Outlying Isles</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="UK">United Kingdom</option><option value="US">United States</option><option value="UY">Uruguay</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VA">Vatican City State</option><option value="VE">Venezuela</option><option value="VN">Viet Nam</option><option value="VG">Virgin Islands (British)</option><option value="VI">Virgin Islands (US)</option><option value="WF">Wallis & Futuna Isles</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="YU">Yugoslavia</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select></td></tr>
+<tr><td></td><td class="smallheading">Coordinate<br />Comments</td><td><textarea name="CoordComm" cols="40" rows="5"></textarea></td></tr><tr><td colspan="2" class="heading">Locality Comments</td><td><textarea name="LocComm" cols="40" rows="5"></textarea></td></tr></table>
+<td width="11" style="width: 11px; background: white url(images/frameR.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameRTi.gif" border="0"></td></tr><tr><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLB.gif"></td><td height="11" style="height: 11px; background: #c9c9c9 url(images/frameB.gif) repeat-x"></td><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRB.gif"></td></tr>
+</table><p>
+<script type="text/javascript" src="/online/scripts/ajax.js"></script>
+<script type="text/javascript" src="scripts/locate.js"></script>
+<script type="text/javascript" src="scripts/fade.js"></script>
+<script type="text/javascript" src="scripts/contextHint.js"></script>
+
+<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLT.gif"></td>
+		<td height="11" style="height: 11px; background: #c9c9c9 url(images/frameT.gif) repeat-x"></td>
+		<td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRT.gif"></td>
+	</tr>
+	<tr>
+		<td width="11" style="width: 11px; background: white url(images/frameL.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameLTi.gif" border="0"></td>
+		<td style="background: white url(images/frameM.gif) repeat-x">
+			<table border="0" style="border: none; width: 750px; text-align: left" width="750" cellspacing="0" cellpadding="2">
+<tr><td colspan="3" class="deHeading">Collection information</td></tr><tr><td style="text-align: left">
+<tr>
+	<td width="250" class="heading" style="color: #FF0000">Collection Date</td>
+	<td width="270"><input type="text" name="CollDate" id="CollDate" value="10/06/2007">&nbsp;&nbsp;&nbsp;<a href="javascript:var x = document.getElementById('CollDateCal').onfollow()"><img id="CollDateCal" border="0" src="images/calendar.gif"></a></td><td width="30"></td>
+	<span>
+		<td id="colDateError" class="errorMsg" style="color: red" >Required field</td>
+	</span>
+</tr>
+<tr>
+	<td class="heading" style="vertical-align: top; color: #FF0000">Collectors  <span class="smalltext">(family name first)</span></td>
+	<td colspan="2"><table border="0"><tbody id="collTable"></tbody></table><input name="Coll" id="CollectorField" maxlength="64">&nbsp;<a href="javascript:acceptCollector(document.getElementById('CollectorField').value);">Add</a>
+	<span>
+		<td id="colNameError" class="errorMsg" style="color: red" >Required field</td>
+	</span>
+<script><!--
+new ContextHint(
+	document.getElementById("CollectorField"),
+	function generateURL(start) {
+		return "ajaxSupport.xml?action=List&type=Person&start=" + start + "&q=" + Math.random();
+	},
+	null,
+	true
+);
+
+function clearCollectorField() {
+	var colField = document.getElementById("CollectorField");
+	if (colField.value.length > 0) {
+		acceptCollector(document.getElementById('CollectorField').value);
+	}
+}
+function acceptCollectorAndSubmit(personName) {
+	//Only called if personName is > 0
+	callAJAX("ajaxSupport.xml?action=Confirm&type=Person&name=" + escape(personName) + "&q=" + Math.random(), processCollectorAcceptAndSubmit);
+}
+function acceptCollector(personName) {
+	if (personName.length == 0)
+		alert("Enter a name first!");
+	callAJAX("ajaxSupport.xml?action=Confirm&type=Person&name=" + escape(personName) + "&q=" + Math.random(), processCollectorAccept);
+}
+function processCollectorAcceptAndSubmit() {
+	processCollectorAcceptImpl(true);
+}
+function processCollectorAccept() {
+	processCollectorAcceptImpl(false);
+}
+function processCollectorAcceptImpl(doSubmit) {
+	if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") {
+                        if(xmlHttp.status==200) {
+		var xml = xmlHttp.responseXML;
+		var reply = xml.getElementsByTagName("status")[0].firstChild.data;
+		var name = xml.getElementsByTagName("name")[0].firstChild.data;
+		if (reply == "Exists") {
+			addCollector(name);
+			if (doSubmit)
+				document.form1.submit();
+		} else if (confirm(name + " does not exist. A new record will be created.  Continue?")) {
+			callAJAX("ajaxSupport.xml?action=Add&type=Person&name=" + escape(name) + "&q=" + Math.random(), (doSubmit) ? processCollectorAcceptAndSubmit : processCollectorAccept);
+		}
+	} else {
+                            alert("The server had an issue: ".concat(xmlHttp.statusText));
+                  }
+       }
+}
+function addCollector(name) {
+	var uid = "coll" + Math.round(Math.random() * 100000);
+	var tbl = document.getElementById("collTable");
+	var tr = document.createElement("tr");
+	tr.id = uid;
+	var td = document.createElement("td");
+	td.innerHTML = name;
+	tr.appendChild(td);
+	td = document.createElement("td");
+	td.innerHTML = '<input type="hidden" name="Coll" value="' + name + '"><a href="javascript:removeCollector(\'' + uid + '\');">remove</a>';
+	tr.appendChild(td);	
+	tbl.appendChild(tr);
+	
+	//Clear the old value
+	var field = document.getElementById("CollectorField");
+	field.focus();
+	window.setTimeout("document.getElementById('CollectorField').value = ''", 100);
+}
+function removeCollector(uid) {
+	var tbl = document.getElementById("collTable");
+	var tr = document.getElementById(uid);
+	tbl.removeChild(tr);
+}
+//This is for the initial load
+var collArray = new Array();
+collArray[collArray.length] = "Clowes, C.D.";
+
+
+for (var i=0; i<collArray.length; i++) {
+	addCollector(collArray[i]);
+}
+//--></script>
+</td>
+</tr>
+<tr><td class="heading" style="color: #FF0000">Fossils In Place</td>
+	<td style="z-index: 1">
+		<select name="InPlace">
+			<option value=""> -- Choose -- </option>
+			<option value="Yes" selected>Yes</option><option value="Almost">Almost</option><option value="No">No</option><option value="Unknown">Unknown</option>
+		</select>
+	</td>
+	<div>
+		<td id="fossilsInPlaceError" class="errorMsg" style="color: red" >Required field</td>
+	</div>
+</tr>
+<tr>
+<td class="heading"><span style="color: #FF0000">Sent To</span><br /><span class="smalltext">NOTE: if no fossils collected this field may be left blank and details entered in the <i>Not Collected</i> field.</span></td>
+<td><textarea name="SentTo" cols="40" rows="3">microflora*Clowes, C.D.*GNS*
+</textarea></td><td><a href="javascript:var newWin=open('data_entry_supp.jsp?Type=SentTo', 'Supp','width=800,height=450');" title="Build..."><img src="images/build.gif" width="20" height="20" border="0" /></a></td>
+<span>
+	<td id="sentToError" class="errorMsg" style="color: red" >Required field</td>
+</span>
+</tr>
+<tr>
+<td class="heading">Not Collected<br /><span class="smalltext">specify fossils seen but not collected</span></td>
+<td><textarea name="NotColl" cols="40" rows="3"></textarea></td></tr>
+<tr>
+<td class="heading">Significance/Comments</td>
+<td><textarea name="Sig" cols="40" rows="3"></textarea></td></tr>
+</table>
+<td width="11" style="width: 11px; background: white url(images/frameR.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameRTi.gif" border="0"></td></tr><tr><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLB.gif"></td><td height="11" style="height: 11px; background: #c9c9c9 url(images/frameB.gif) repeat-x"></td><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRB.gif"></td></tr></table><p>
+<table border="0" cellpadding="0" cellspacing="0"><tr><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLT.gif"></td><td height="11" style="height: 11px; background: #c9c9c9 url(images/frameT.gif) repeat-x"></td><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRT.gif"></td></tr><tr><td width="11" style="width: 11px; background: white url(images/frameL.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameLTi.gif" border="0"></td><td style="background: white url(images/frameM.gif) repeat-x"><table border="0" style="border: none; width: 550px; text-align: left" width="550" cellspacing="0" cellpadding="2">
+<tr><td colspan="4" class="deHeading">Stratigraphy</td></tr><tr><td style="text-align: left">
+<tr>
+<td class="heading" colspan="2">Stratigraphic Name</td>
+<td colspan="2"><input type="text" id="StratName" name="StratName" size="40" value=""><script><!--
+new ContextHint(
+	document.getElementById("StratName"),
+	function generateURL(start) {
+		return "ajaxSupport.xml?action=List&type=Strat&start=" + start + "&q=" + Math.random();
+	},
+	null,
+	true
+);
+//--></script></td>
+</tr>
+
+<tr>
+<td class="heading" rowspan="2">Stage Limits<br />
+<span class="smalltext">Enter oldest age first. For uncertain limits enter a ? at end of stage name</span></td>
+<td width="100" class="smallheading">Inferred</td>
+<td>
+<input type="text" id="InfStageStart" name="InfStageStart2" size="20" value="" />&nbsp;to&nbsp;<input type="text" id="InfStageStop" name="InfStageStop2" size="20" value="" /></td></tr>
+<tr><td class="smallheading">Known</td>
+<td>
+<input type="text" id="KnwStageStart" name="KnwStageStart2" size="20" value="" />&nbsp;to&nbsp;<input type="text" id="KnwStageStop" name="KnwStageStop2" size="20" value="" /><script><!--
+new ContextHint(
+	document.getElementById("InfStageStart"),
+	function generateURL(start) {
+		return "ajaxSupport.xml?action=List&type=Age&start=" + start + "&q=" + Math.random();
+	},
+	null,
+	true
+);
+
+new ContextHint(
+	document.getElementById("InfStageStop"),
+	function generateURL(start) {
+		return "ajaxSupport.xml?action=List&type=Age&start=" + start + "&q=" + Math.random();
+	},
+	null,
+	true
+);
+new ContextHint(
+	document.getElementById("KnwStageStart"),
+	function generateURL(start) {
+		return "ajaxSupport.xml?action=List&type=Age&start=" + start + "&q=" + Math.random();
+	},
+	null,
+	true
+);
+
+new ContextHint(
+	document.getElementById("KnwStageStop"),
+	function generateURL(start) {
+		return "ajaxSupport.xml?action=List&type=Age&start=" + start + "&q=" + Math.random();
+	},
+	null,
+	true
+);
+//--></script>
+</td>
+</tr>
+<tr>
+<td colspan="2" class="heading">Samples Nearby</td>
+<td><input type="text" name="PrevSamp" size="40" value=""></td><td><a href="javascript:var newWin=open('data_entry_supp.jsp?Type=PrevSamp', 'Supp', 'width=800,height=350');" title="Build..."><img src="images/build.gif" width="20" height="20" border="0" /></a>
+</td>
+</tr>
+<tr>
+<td class="heading" colspan="2">Sample Relationships</td>
+<td><textarea name="SampRel" cols="40" rows="3"></textarea></td><td><a href="javascript:var newWin=open('data_entry_supp.jsp?Type=SampRel', 'Supp', 'width=800,height=450');" title="Build..."><img src="images/build.gif" width="20" height="20" border="0" /></a>
+</td>
+</tr>
+<tr>
+<td class="heading" colspan="2">Stratigraphic Relationships</td>
+<td><textarea name="StratRel" cols="40" rows="3"></textarea></td><td><a href="javascript:var newWin=open('data_entry_supp.jsp?Type=StratRel', 'Supp', 'width=800,height=450');" title="Build..."><img src="images/build.gif" width="20" height="20" border="0" /></a>
+</td>
+</tr>
+<tr>
+<td class="heading">Column/Map</td>
+<td></td>
+<td><input type="text" name="ColMap" size="40" value=""></td>
+</tr>
+<tr>
+<td><img src="images/blank.gif" width="1" height="5" /></td>
+</tr>
+<tr>
+<td width="150" class="heading" rowspan="4">Attitude<br /><span class="smalltext">For flat-lying strata, enter 0 for <i>Dip</i>, Normal or Overturned for <i>Facing</i> and leave other fields blank.</span></td>
+<td width="100" class="smallheading">Dip</td>
+<td width="270"><input type="text" name="Dip" size="3" value=""></td><td width="30"></td>
+</tr>
+<tr>
+<td class="smallheading">Dip Dirn.</td>
+<td><select name="DipDir">
+<option value=""> -- Choose -- </option>
+<option value="N">North</option><option value="NE">North-East</option><option value="E">East</option><option value="SE">South-East</option><option value="S">South</option><option value="SW">South-West</option><option value="W">West</option><option value="NW">North-West</option></select></td>
+</tr>
+<tr>
+<td class="smallheading">Strike</td>
+<td><input type="text" name="Strike" size="4" value=""></td></tr>
+<tr>
+<td class="smallheading">Facing</td><td><select name="Facing">
+<option value=""> -- Choose -- </option>
+<option value="Normal">Normal</option><option value="Overturned">Overturned</option></select></td>
+</tr>
+<tr>
+<td class="heading">Stratigraphy Comments</td>
+<td></td>
+<td><textarea name="StratComm" cols="40" rows="3"></textarea></td></tr>
+</table>
+<td width="11" style="width: 11px; background: white url(images/frameR.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameRTi.gif" border="0"></td></tr><tr><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLB.gif"></td><td height="11" style="height: 11px; background: #c9c9c9 url(images/frameB.gif) repeat-x"></td><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRB.gif"></td></tr></table><p>
+<table border="0" cellpadding="0" cellspacing="0"><tr><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLT.gif"></td><td height="11" style="height: 11px; background: #c9c9c9 url(images/frameT.gif) repeat-x"></td><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRT.gif"></td></tr><tr><td width="11" style="width: 11px; background: white url(images/frameL.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameLTi.gif" border="0"></td><td style="background: white url(images/frameM.gif) repeat-x"><table border="0" style="border: none; width: 550px; text-align: left" width="550" cellspacing="0" cellpadding="2">
+<tr><td colspan="4" class="deHeading">Sedimentary features</td></tr><tr><td style="text-align: left">
+<tr>
+<td class="heading">Grain Size</td>
+<td class="smallheading">Primary</td>
+<td><select name="GrainSizeP"><option value="-">-- Choose --</option><option value="104">1: granule</option><option value="105">2: very coarse sand</option><option value="106">3: coarse sand</option><option value="107">4: medium sand</option><option value="108">5: fine sand</option><option value="109">6: very fine sand</option><option value="110">7: silt</option><option value="111">8: clay</option><option value="112">9: mud</option><option value="101">B: boulder</option><option value="102">C: cobble</option><option value="103">P: pebble</option></select></td>
+</tr>
+<tr>
+<td></td>
+<td class="smallheading">Secondary</td>
+<td><select name="GrainSizeS"><option value="-">-- Choose --</option><option value="104">1: granule</option><option value="105">2: very coarse sand</option><option value="106">3: coarse sand</option><option value="107">4: medium sand</option><option value="108">5: fine sand</option><option value="109">6: very fine sand</option><option value="110">7: silt</option><option value="111">8: clay</option><option value="112">9: mud</option><option value="101">B: boulder</option><option value="102">C: cobble</option><option value="103">P: pebble</option></select></td>
+</tr>
+<tr>
+<td></td>
+<td class="smallheading">Comparator Used</td>
+<td><select name="GSComp">
+<option value=""> -- Choose -- </option>
+<option value="Y">Yes</option><option value="N">No</option></select></td>
+</tr>
+<tr>
+<td class="heading">Stratification</td>
+<td class="smallheading">Thickness</td>
+<td><select name="BedThick"><option value="-">-- Choose --</option><option value="121">1: non-bedded</option><option value="122">2: > 120 cm</option><option value="123">3: 60 - 120 cm</option><option value="124">4: 5 - 60 cm</option><option value="125">5: 1 - 5 cm</option><option value="126">6: < 1 cm (laminated)</option></select></td>
+</tr>
+<tr>
+<td></td>
+<td class="smallheading">Features</td>
+<td><select name="BeddingP"><option value="-">-- Choose --</option><option value="131">G: graded</option><option value="132">S: slump-folded</option><option value="133">X: cross-bedded</option></select>&nbsp;<span class="heading">&</span>&nbsp;<select name="BeddingS"><option value="-">-- Choose --</option><option value="131">G: graded</option><option value="132">S: slump-folded</option><option value="133">X: cross-bedded</option></select></td>
+</tr>
+<tr>
+<td class="heading">Weathering</td>
+<td></td>
+<td><select name="Weath"><option value="-">-- Choose --</option><option value="141">1: none or slight</option><option value="142">2: moderate</option><option value="143">3: intense</option></select></td>
+</tr>
+<tr>
+<td class="heading">Hardness</td>
+<td></td>
+<td><select name="Hard"><option value="-">-- Choose --</option><option value="151">1: unconsolidated</option><option value="152">2: moderately soft</option><option value="153">3: moderately hard</option><option value="154">4: hard</option></select></td>
+</tr>
+<tr>
+<td class="heading">Carbonate</td>
+<td></td>
+<td><select name="Carb"><option value="-">-- Choose --</option><option value="161">1: non-calcareous</option><option value="162">2: calcareous</option><option value="163">3: limestone</option></select></td>
+</tr>
+<tr>
+<td class="heading">Colour</td>
+<td class="smallheading">Shade</td>
+<td><select name="ColMod"><option value="-">-- Choose --</option><option value="173">D: dark</option><option value="171">L: light</option><option value="172">M: medium</option></select></td>
+</tr>
+<tr>
+<td></td>
+<td class="smallheading">Colour</td>
+<td><select name="ColourP"><option value="-">-- Choose --</option><option value="181">1: white</option><option value="182">2: grey</option><option value="183">3: black</option><option value="184">4: red</option><option value="185">5: brown</option><option value="186">6: yellow</option><option value="187">7: green</option><option value="188">8: blue</option><option value="189">9: purple</option></select>&nbsp;<span class="heading">-</span>&nbsp;<select name="ColourS"><option value="-">-- Choose --</option><option value="181">1: white</option><option value="182">2: grey</option><option value="183">3: black</option><option value="184">4: red</option><option value="185">5: brown</option><option value="186">6: yellow</option><option value="187">7: green</option><option value="188">8: blue</option><option value="189">9: purple</option></select></td>
+</tr>
+<tr>
+<td></td>
+<td class="smallheading">Wet/Dry</td>
+<td><select name="Wet">
+<option value=""> -- Choose -- </option>
+<option value="Wet">Wet</option><option value="Dry">Dry</option></select></td>
+</tr>
+<tr>
+<td class="heading" colspan="2">Additional Features</td>
+<td><input type="text" name="SedFeat" size="40" value=""></td><td><a href="javascript:var newWin=open('data_entry_supp.jsp?Type=SedFeat', 'Supp', 'width=800,height=350');" title="Build..."><img src="images/build.gif" width="20" height="20" border="0" /></a>
+</td>
+</tr>
+<tr>
+<td class="heading" colspan="2">Inferred Environment</td>
+<td><select name="DepEnv1"><option value=""> -- Choose -- </option>
+<option value="Marine">Marine</option><option value="Non-marine">Non-marine</option></select></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><textarea name="DepEnv2" cols="40" rows="3"></textarea></td></tr>
+<tr>
+<td class="heading" colspan="2">Nature of Rock Unit</td>
+<td><textarea name="RockNat" cols="40" rows="3"></textarea></td></tr>
+<tr>
+<td class="heading" colspan="2">Correspondence, Cross-references</td>
+<td><textarea name="Corr" cols="40" rows="3"></textarea></td></tr>
+</table>
+<td width="11" style="width: 11px; background: white url(images/frameR.gif) repeat-y; vertical-align: top" valign="top"><img src="images/frameRTi.gif" border="0"></td></tr><tr><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameLB.gif"></td><td height="11" style="height: 11px; background: #c9c9c9 url(images/frameB.gif) repeat-x"></td><td width="11" height="11" style="width: 11px; height: 11px"><img border="0" src="images/frameRB.gif"></td></tr></table><table border="0" cellpadding="0" cellspacing="2">
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="javascript:submitForm('Save');"><img src="images/save.gif" height="20" width="20" border="0" alt="Save"/></a>&nbsp;&nbsp;</td>
+<td><a href="javascript:submitForm('Save');" class="boldlink">Save</a></td></tr>
+<tr><td><a href="javascript:submitForm('Submit');"><img src="images/submit.gif" height="20" width="20" border="0" alt="Submit to Database" title="Submit"/></a>&nbsp;&nbsp;</td><td><a class="heading" href="javascript:submitForm('Submit');" class="boldlink">Submit</a></td></tr></table></form><script>
+Calendar.setup(
+	{
+		inputField:		"CollDate",		button:			"CollDateCal",		ifFormat:		"%d/%m/%Y",
+		eventName:		"follow",
+		weekNumbers:	false,
+		showsTime:		false,
+		onClose:		function(cal) {cal.hide(); }
+	}
+);
+</script>
+<!--BTW this can be moved back into the main one now...-->
+<script><!--
+
+//Modify the form to force appropriate actions on submit
+function preSubmit() { 
+	var collField = document.getElementById("CollectorField");
+	if (collField.value.length > 0) {
+		acceptCollectorAndSubmit(collField.value);
+		return false;
+	} else
+		return true;
+}
+//--></script>
+</td></tr></table><script><!--
+	function submitForm(saveType) {
+		document.form1.SaveType.value = saveType;
+		if (!window.preSubmit || preSubmit()) {
+			document.form1.submit();
+		}
+	}
+	//--></script>    </div>
+   </div>
+   <br/>
+  </div>
+  <div>&nbsp;</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+  var pageTracker = _gat._getTracker("UA-3641432-1");
+  pageTracker._initData();
+  pageTracker._trackPageview();
+</script>
+<script type="text/javascript">
+  grecaptcha.ready(function() {
+  grecaptcha.execute('6Ldyn7sUAAAAAMrIdH7tWmP9f0N1gUIldY3PgzBI', {action: 'IPSysLoginPage'}).then(function(token) {
+  console.log(token);
+  document.getElementById("token").value = token;
+  });
+});
+</script>
+ </body>
+</html>
